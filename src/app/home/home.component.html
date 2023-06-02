@@ -1,1 +1,35 @@
-<p>home works!</p>
+
+<div class="row">
+  <div class="col-8 m-auto">
+
+
+    <form [formGroup]="formGroupClient">
+ <div class="mb-3">
+  <div class="display-6 text-center">
+      Anuncios
+  </div>
+    </div>
+
+
+
+    <div class="card" style="width: 18rem;">
+      <img src="https://image1.mobiauto.com.br/images/api/images/v1.0/243306962/transform/fl_progressive,f_webp,q_70,w_800" class="card-img-top" alt="cadastro">
+      <div class="card-body">
+        <p class="card-text">Palio</p>
+      </div>
+    </div>
+
+
+      <tr *ngFor="let cadastro of cadastro">
+        <th scope="row">{{cadastro.id}}</th>
+        <td>{{cadastro.titulo}}</td>
+        <td>{{cadastro.descricao}}</td>
+        <td>{{cadastro.preco}}</td>
+        <td>{{cadastro.date}}</td>
+        <td>{{cadastro.status}}</td>
+        <td>{{cadastro.img}}</td>
+      </tr>
+
+
+
+</form>

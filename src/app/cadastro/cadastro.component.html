@@ -22,6 +22,8 @@
       <label for="date" class="form-label">Data de Fabricação:</label>
       <input type="date" formControlName="date" class="form-control" id="date" placeholder="Data">
     </div>
+
+
     <div class="mb-3">
       <label for="descrição" class="form-label">Descrição:</label>
       <input type="descricao" formControlName="descricao" class="form-control" id="descricao" placeholder="Descrição">
@@ -90,6 +92,7 @@
       <td>{{cadastro.preco}}</td>
       <td>{{cadastro.date}}</td>
       <td>{{cadastro.status}}</td>
+      <td>{{cadastro.img}}</td>
       <td>
         <button type="button" class="btn btn-primary me-1" (click)="edit(cadastro)" >Editar</button>
         <button type="button" class="btn btn-primary" (click)="delete(cadastro)">Excluir</button>
