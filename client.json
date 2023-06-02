@@ -1,19 +1,21 @@
 {
-  "posts": [
+  "cadastro": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "titulo": "Palio 2000",
+      "descricao": "",
+      "preco": "$5.000",
+      "date": "01/02/2000",
+      "img": "",
+      "status": "Ativo"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "titulo": "Vectra GL",
+      "descricao": "Perfeita Condiçao",
+      "preco": "$9.000",
+      "date": "2000-02-02",
+      "status": "Ativo"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

@@ -1,1 +1,99 @@
-<p>cadastro works!</p>
+
+<div class="row">
+  <div class="col-8 m-auto">
+
+
+    <form [formGroup]="formGroupClient">
+ <div class="mb-3">
+  <div class="display-6 text-center">
+      Cadastro De Anuncio
+  </div>
+    </div>
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Titulo:</label>
+      <input type="text" formControlName="titulo" class="form-control" id="titulo" placeholder="Titulo">
+
+      <div *ngIf="submitted && titulo.invalid">
+        <small class="text-danger">Titulo inválido!</small>
+  </div>
+
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Data de Fabricação:</label>
+      <input type="date" formControlName="date" class="form-control" id="date" placeholder="Data">
+    </div>
+    <div class="mb-3">
+      <label for="descrição" class="form-label">Descrição:</label>
+      <input type="descricao" formControlName="descricao" class="form-control" id="descricao" placeholder="Descrição">
+
+      <div *ngIf="submitted && descricao.invalid">
+        <small class="text-danger">descricao inválido!</small>
+  </div>
+
+    </div>
+
+    <div class="mb-3">
+      <label for="preco" class="form-label">Preço</label>
+      <input type="preco" formControlName="preco" class="form-control" id="preco" placeholder="Preço">
+
+      <div *ngIf="submitted && preco.invalid">
+        <small class="text-danger">Numero inválido!</small>
+  </div>
+
+  <div class="mb-3">
+
+    <label for="status" class="form-label">Status</label>
+
+    <div class="form-check">
+      <input class="form-check-input" type="radio" formControlName="status" name="exampleRadios" id="Ativo" value="Ativo" checked>
+      <label class="form-check-label" for="Ativo">
+        Ativo
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" formControlName="status" name="exampleRadios" id="Desativo" value="Desativo">
+      <label class="form-check-label" for="Desativo">
+        Desativo
+      </label>
+    </div>
+
+    </div>
+
+
+    </div>
+
+
+    <div class="mb-2 d-flex justify-content-end">
+      <button type="button" class="btn btn-primary me-1" (click)="save()">Salvar</button>
+      <button type="button" class="btn btn-primary" (click)="clean()">Limpar</button>
+    </div>
+</form>
+
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Preço</th>
+      <th scope="col">Data</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cadastro of cadastro">
+      <th scope="row">{{cadastro.id}}</th>
+      <td>{{cadastro.titulo}}</td>
+      <td>{{cadastro.descricao}}</td>
+      <td>{{cadastro.preco}}</td>
+      <td>{{cadastro.date}}</td>
+      <td>{{cadastro.status}}</td>
+      <td>
+        <button type="button" class="btn btn-primary me-1" (click)="edit(cadastro)" >Editar</button>
+        <button type="button" class="btn btn-primary" (click)="delete(cadastro)">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
