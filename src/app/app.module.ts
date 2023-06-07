@@ -12,13 +12,15 @@ import { SupplierComponent } from './supplier/supplier.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
     SupplierComponent,
-    CadastroComponent
+    CadastroComponent,
+
   ],
   imports: [
     BrowserModule,

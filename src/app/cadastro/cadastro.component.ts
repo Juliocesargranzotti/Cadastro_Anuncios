@@ -25,6 +25,7 @@ export class CadastroComponent {
       descricao : ['',[Validators.required]],
       preco : ['',[Validators.required]],
       date : ['',[Validators.required]],
+      img: ['', [Validators.required]],
       status : ['',[Validators.required]]
     });
   }
@@ -108,5 +109,8 @@ export class CadastroComponent {
     return this.formGroupClient.get("status");
   }
 
+  get img(): any {
+    return this.formGroupClient.get("img");
+  }
 }
 

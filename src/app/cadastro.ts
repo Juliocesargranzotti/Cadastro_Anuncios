@@ -6,7 +6,7 @@ export interface Cadastro{
   preco : number ;
   date : number;
   img : string;
-  status: string;
+  status: boolean;
 
 
 }
